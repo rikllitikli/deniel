@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+p{
+    font-family: Arial;
+}
+
 BODY {
     margin: 0;
 }
@@ -15,7 +19,7 @@ BODY {
     background: black;
     animation: sky-change 2s  linear;
     animation-fill-mode: forwards;
-    animation-delay: 6s;
+    animation-delay: 8s;
 }
 
 
@@ -38,7 +42,7 @@ BODY {
     top: -33px;
     left: -52px;
     transform: rotate(-102deg);
-    animation-duration: 5s;
+    animation-duration: 7s;
     width: 333px;
     animation-fill-mode: forwards;
     animation-name: svet;
@@ -73,40 +77,124 @@ BODY {
 
 .bg_moon{
     position: relative;
+    opacity: 0;
+    animation-name: moon;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 6.5s;
 }
 
 .moon{
     background-color: #ffcc00;
-    opacity: 0;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     position: absolute;
     right: 36px;
     top: 27px;
-    animation-name: moon;
-    animation-duration: 1s;
+    animation-name: bg_moon;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: 4.5s;
+    animation-delay: 19s;
 }
+
+@keyframes bg_moon {
+    0%{
+        background-color: #ffcc00;
+    }
+    100%{
+        background-color: #c90000;
+        -webkit-box-shadow: 0px 0px 5px 6px rgba(201, 0, 0, 0.28);
+        -moz-box-shadow: 0px 0px 5px 6px rgba(201, 0, 0, 0.28);
+        box-shadow: 0px 0px 5px 6px rgba(201, 0, 0, 0.28);
+    }
+}
+
 @keyframes moon {
     0%{
         opacity: 0;
     }
     100%{
-        opacity: 50%;
+        opacity: 80%;
     }
 }
 
-.moon p{
+.moon .one{
     text-align: center;
+    outline: 1px white!important;
     font-size: 20px;
     position: absolute;
     top: 54px;
     left: 14px;
-    font-family: Roboto;
+    opacity: 100;
     font-weight: bold;
+    animation-name: one;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 11s;
+
 }
+@keyframes one {
+    0%{
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.moon .two{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 47px;
+    left: 4px;
+    opacity: 0;
+    font-weight: bold;
+    animation-name: two;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+}
+
+@keyframes two {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.moon .three{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 47px;
+    line-height: 30px;
+    left: 6px;
+    opacity: 0;
+    font-weight: 900;
+    animation-name: three;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-delay: 17s;
+    -webkit-text-stroke: 0.5px white;
+    color: black;
+}
+
+@keyframes three {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
 
 .neon_bg{
     position: absolute;
@@ -122,7 +210,22 @@ BODY {
     bottom: -20px;
     left: 0;
     z-index: 100;
+    opacity: 0;
+    animation-name: dan;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
 }
+
+@keyframes dan {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
 .daniel img{
     width: 80%;
     margin-left: 50px;
@@ -132,9 +235,22 @@ BODY {
     position: absolute;
     bottom: -10px;
     left: -34px;
+    opacity: 0;
     z-index: 101;
+    animation-name: pasha;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
 }
 
+@keyframes pasha {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
 .pasha img{
     width: 110px;
 }
@@ -143,8 +259,66 @@ BODY {
     position: absolute;
     bottom: -25px;
     right: 0;
+    opacity: 0;
+    animation-name: molbert;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
 }
-
+@keyframes molbert {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
 .molbert img{
     width: 100px;
+}
+.karoch{
+    animation-name: karoch;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 20s;
+    opacity: 0;
+}
+
+@keyframes karoch {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+.karoch p{
+    position: absolute;
+    color: white;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.karoch .one_p{
+    color: #650000;
+    -webkit-text-stroke: 2px #650000;
+}
+
+.karoch .two_p{
+    color: #e80202;
+    animation: animate 4s ease-in-out infinite alternate;
+}
+
+@keyframes animate {
+    0%, 100%{
+        clip-path: polygon(0% 52%, 14% 54%, 28% 46%, 44% 51%, 55% 61%, 73% 49%, 86% 40%, 100% 45%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 52%, 10% 53%, 27% 62%, 46% 59%, 56% 45%, 67% 38%, 81% 37%, 100% 45%, 100% 100%, 0% 100%);
+    }
 }
