@@ -95,7 +95,7 @@ BODY {
     animation-name: bg_moon;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: 19s;
+    animation-delay: 17s;
 }
 
 @keyframes bg_moon {
@@ -181,7 +181,7 @@ BODY {
     animation-name: three;
     animation-duration: 5s;
     animation-fill-mode: forwards;
-    animation-delay: 17s;
+    animation-delay: 18s;
     -webkit-text-stroke: 0.5px white;
     color: black;
 }
@@ -280,7 +280,7 @@ BODY {
     animation-name: karoch;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: 20s;
+    animation-delay: 21s;
     opacity: 0;
 }
 
